@@ -57,11 +57,11 @@ $projects = [
     [
         'num'      => '002',
         'title'    => 'Second Project Title',
-        'type'     => 'UI/UX Design',
-        'desc'     => 'Short description of the project — the design challenge, the solution, and the outcome.',
-        'stack'    => ['Figma', 'CSS'],
-        'link'     => '#',
-        'github'   => '#',
+        'type'     => 'E-Commerce',
+        'desc'     => 'An E-commerce website project',
+        'stack'    => ['HTML', 'Bootstrap', 'CSS', 'JavaScript'],
+        'link'     => 'https://gjsaaron.github.io/E-COMM/vault93-diecast-home.html',
+        'github'   => 'https://github.com/gjsaaron/E-COMM',
         'featured' => false,
     ],
     [
