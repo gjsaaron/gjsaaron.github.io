@@ -1,4 +1,3 @@
-/* ─── THEME VARIABLES ──────────────────────────────────────────── */
 :root {
     --syne: 'Syne', sans-serif;
     --serif: 'Lora', serif;
@@ -7,7 +6,6 @@
     --transition: 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* DARK THEME */
 [data-theme="dark"] {
     --bg: #0C0C0A;
     --bg2: #111110;
@@ -23,7 +21,6 @@
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
-/* LIGHT THEME */
 [data-theme="light"] {
     --bg: #F6F4EE;
     --bg2: #EFEDE6;
@@ -39,7 +36,6 @@
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* ─── RESET & BASE ──────────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -75,7 +71,6 @@ img {
     max-width: 100%;
 }
 
-/* ─── SUBTLE TEXTURE ────────────────────────────────────────────── */
 body::before {
     content: '';
     position: fixed;
@@ -89,7 +84,6 @@ body::before {
     transition: opacity var(--transition);
 }
 
-/* ─── CUSTOM CURSOR ─────────────────────────────────────────────── */
 #js-cursor {
     position: fixed;
     width: 8px;
@@ -127,7 +121,6 @@ body::before {
     }
 }
 
-/* ─── NAVBAR ────────────────────────────────────────────────────── */
 .site-nav {
     position: fixed;
     top: 0;
@@ -137,7 +130,6 @@ body::before {
     background: color-mix(in srgb, var(--bg) 88%, transparent);
     backdrop-filter: blur(20px) saturate(1.3);
     border-bottom: 1px solid var(--border);
-    padding: 1rem 0;
     transition: background var(--transition), border-color var(--transition);
 }
 
@@ -158,14 +150,6 @@ body::before {
 
 .site-nav a.nav-logo:hover {
     opacity: .8;
-}
-
-.nav-items {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    list-style: none;
 }
 
 .nav-items a {
@@ -199,8 +183,6 @@ body::before {
     width: 100%;
 }
 
-
-/* Theme Toggle */
 .theme-toggle {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -289,7 +271,6 @@ body::before {
     }
 }
 
-/* ─── SECTION BASE ──────────────────────────────────────────────── */
 section {
     position: relative;
     z-index: 1;
@@ -303,7 +284,6 @@ section {
     border-top: 1px solid var(--border);
 }
 
-/* ─── EYEBROW LABEL ─────────────────────────────────────────────── */
 .sec-label {
     margin: left -500px;
     ;
@@ -326,7 +306,6 @@ section {
     flex-shrink: 0;
 }
 
-/* ─── HERO ──────────────────────────────────────────────────────── */
 #hero {
     position: relative;
     min-height: 100vh;
@@ -335,7 +314,6 @@ section {
     overflow: hidden;
 }
 
-/* ── Centered name bar pinned to top ── */
 .hero-name-bar {
     margin-top: 75px;
     position: relative;
@@ -350,7 +328,6 @@ section {
     justify-content: center;
 }
 
-/* ── Middle row: [spacer] [canvas] [CTA] ── */
 .hero-middle {
     flex: 1;
     display: grid;
@@ -360,12 +337,10 @@ section {
     margin-top: -50px;
 }
 
-/* Left spacer — mirrors CTA column so canvas is optically centred */
 .hero-spacer {
     border-right: 1px solid var(--border);
 }
 
-/* ── 3D Canvas — centre column ── */
 #logo-3d-wrap {
     position: relative;
     display: flex;
@@ -382,7 +357,6 @@ section {
     display: block;
 }
 
-/* Loading dots */
 #logo-loader {
     position: absolute;
     inset: 0;
@@ -414,7 +388,6 @@ section {
     animation-delay: .4s;
 }
 
-/* ── CTA column — right of canvas ── */
 .hero-cta-col {
     display: flex;
     flex-direction: column;
@@ -423,7 +396,6 @@ section {
     border-left: 1px solid var(--border);
 }
 
-/* ── Hero name ── */
 .hero-name {
     font-weight: 800;
     line-height: .9;
@@ -474,7 +446,6 @@ section {
     }
 }
 
-/* Scroll hint bottom-right */
 .hero-scroll-hint {
     position: absolute;
     bottom: 7rem;
@@ -488,7 +459,6 @@ section {
     }
 }
 
-/* ─── BUTTONS ───────────────────────────────────────────────────── */
 .btn-filled {
     display: inline-flex;
     align-items: center;
@@ -553,8 +523,6 @@ section {
     background: var(--text3);
 }
 
-
-/* ─── ABOUT ─────────────────────────────────────────────────────── */
 .about-heading {
     font-size: clamp(2rem, 4vw, 3.6rem);
     font-weight: 800;
@@ -581,9 +549,6 @@ section {
     font-weight: 500;
 }
 
-.bio-text+.bio-text {
-    margin-top: 1rem;
-}
 
 .stats-grid {
     display: grid;
@@ -591,7 +556,6 @@ section {
     gap: 1px;
     background: var(--border);
     border: 1px solid var(--border);
-    margin-top: 2.5rem;
     border-radius: var(--radius);
     overflow: hidden;
 }
@@ -623,7 +587,6 @@ section {
     margin-top: .4rem;
 }
 
-/* ─── SKILLS ────────────────────────────────────────────────────── */
 .sec-heading {
     font-size: clamp(2rem, 4.5vw, 4.2rem);
     font-weight: 800;
@@ -706,7 +669,6 @@ section {
     line-height: 1;
 }
 
-/* ─── PROJECTS ──────────────────────────────────────────────────── */
 .projects-grid {
     display: grid;
     gap: 1px;
@@ -744,21 +706,18 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    /* Darker overlay to ensure text is fully readable */
-    background: linear-gradient(
-        to bottom, 
-        color-mix(in srgb, var(--surface) 98%, transparent) 0%, 
-        color-mix(in srgb, var(--surface) 75%, transparent) 40%, 
-        color-mix(in srgb, var(--surface) 75%, transparent) 60%, 
-        color-mix(in srgb, var(--surface) 98%, transparent) 100%
-    );
+    background: linear-gradient(to bottom,
+            color-mix(in srgb, var(--surface) 98%, transparent) 0%,
+            color-mix(in srgb, var(--surface) 75%, transparent) 40%,
+            color-mix(in srgb, var(--surface) 75%, transparent) 60%,
+            color-mix(in srgb, var(--surface) 98%, transparent) 100%);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     z-index: -1;
     transition: background .3s;
 }
 
-.proj-card > * {
+.proj-card>* {
     position: relative;
     z-index: 2;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
@@ -766,17 +725,15 @@ section {
 
 .proj-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .proj-card:hover::before {
-    background: linear-gradient(
-        to bottom, 
-        color-mix(in srgb, var(--bg2) 98%, transparent) 0%, 
-        color-mix(in srgb, var(--bg2) 85%, transparent) 40%, 
-        color-mix(in srgb, var(--bg2) 85%, transparent) 60%, 
-        color-mix(in srgb, var(--bg2) 98%, transparent) 100%
-    );
+    background: linear-gradient(to bottom,
+            color-mix(in srgb, var(--bg2) 98%, transparent) 0%,
+            color-mix(in srgb, var(--bg2) 85%, transparent) 40%,
+            color-mix(in srgb, var(--bg2) 85%, transparent) 60%,
+            color-mix(in srgb, var(--bg2) 98%, transparent) 100%);
 }
 
 .proj-card.full-width {
@@ -798,6 +755,7 @@ section {
     color: var(--accent);
     transform: translate(3px, -3px);
 }
+
 .proj-num {
     font-family: var(--mono);
     font-size: .58rem;
@@ -831,12 +789,6 @@ section {
     flex: 1;
 }
 
-.stack-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .3rem;
-}
-
 .stack-pill {
     font-family: var(--mono);
     font-size: .56rem;
@@ -859,11 +811,8 @@ section {
 }
 
 .proj-links {
-    display: flex;
-    gap: 1.2rem;
     padding-top: .85rem;
     border-top: 1px solid var(--border);
-    margin-top: auto;
 }
 
 .proj-link {
@@ -882,7 +831,6 @@ section {
     color: var(--accent);
 }
 
-/* ─── CONTACT ───────────────────────────────────────────────────── */
 .contact-heading {
     font-size: clamp(2.5rem, 5vw, 5.5rem);
     font-weight: 800;
@@ -950,7 +898,6 @@ a.contact-item:hover .ci-arrow {
     transition: color .2s, transform .2s;
 }
 
-/* ─── FOOTER ────────────────────────────────────────────────────── */
 footer {
     border-top: 1px solid var(--border);
     padding: 1.8rem 0;
@@ -1001,7 +948,6 @@ footer {
     display: block;
 }
 
-/* ─── ANIMATIONS ────────────────────────────────────────────────── */
 .reveal {
     opacity: 0;
     transform: translateY(20px);
@@ -1058,22 +1004,17 @@ footer {
     }
 }
 
-/* ─── RESPONSIVE ────────────────────────────────────────────────── */
-
-/* ── Tablet: collapse 3-col hero → stack ── */
 @media (max-width: 991px) {
     .hero-middle {
         grid-template-columns: 1fr;
         margin-top: -0.75rem;
         max-height: none;
-        /* remove the 55vh cap so stacked content fits */
     }
 
     .hero-spacer {
         display: none;
     }
 
-    /* Remove the huge push-down paddings (only needed in side-by-side layout) */
     .hero-role-serif {
         padding-top: 1.5rem;
     }
@@ -1099,13 +1040,11 @@ footer {
     }
 }
 
-/* ── Mobile: ≤ 767px ── */
 @media (max-width: 767px) {
     .section-pad {
         padding: 4.5rem 0;
     }
 
-    /* Hero name — target the actual span elements, not .hero-name */
     .hero-name .name-solid {
         font-size: clamp(3rem, 13vw, 7rem);
     }
@@ -1114,13 +1053,11 @@ footer {
         font-size: clamp(2.5rem, 11vw, 6rem);
     }
 
-    /* Hero role text — tighten up */
     .hero-role-serif {
         padding-top: 1rem;
         font-size: 0.85rem;
     }
 
-    /* Buttons — stack vertically on very narrow viewports */
     .btn-group {
         padding-top: 1rem;
         flex-direction: column;
@@ -1133,28 +1070,23 @@ footer {
         justify-content: center;
     }
 
-    /* Projects — un-span the featured card */
     .proj-card.full-width {
         grid-column: auto;
     }
 
-    /* About stats — keep 2-col but shrink numbers */
     .stat-number {
         font-size: 1.6rem;
     }
 
-    /* Skills — 2 columns is already set, just tighten cell padding */
     .skill-cell {
         padding: 0.85rem 1rem;
         font-size: 0.68rem;
     }
 
-    /* Contact heading */
     .contact-heading {
         font-size: clamp(2rem, 8vw, 3.5rem);
     }
 
-    /* Footer — stack into a single column */
     .footer-inner {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -1167,10 +1099,8 @@ footer {
     }
 }
 
-/* ── Very small: ≤ 480px ── */
 @media (max-width: 480px) {
 
-    /* Hero name bar */
     .hero-name-bar {
         padding: 0.8rem 0 0.2em;
     }
@@ -1183,41 +1113,34 @@ footer {
         font-size: clamp(2rem, 12vw, 3.5rem);
     }
 
-    /* Role text */
     .hero-role-serif {
         font-size: 0.8rem;
         padding-top: 0.75rem;
     }
 
-    /* Buttons */
     .btn-filled,
     .btn-outline {
         padding: 0.8rem 1.2rem;
         font-size: 0.62rem;
     }
 
-    /* 3D canvas area */
     #logo-3d-wrap {
         min-height: 38vh;
         max-height: 44vh;
     }
 
-    /* Section headings */
     .sec-heading {
         font-size: clamp(1.8rem, 9vw, 3rem);
     }
 
-    /* About heading */
     .about-heading {
         font-size: clamp(1.8rem, 7vw, 2.5rem);
     }
 
-    /* Contact heading */
     .contact-heading {
         font-size: clamp(1.8rem, 9vw, 2.8rem);
     }
 
-    /* Project cards */
     .proj-card {
         padding: 1.5rem;
     }
@@ -1226,7 +1149,6 @@ footer {
         font-size: 1.1rem;
     }
 
-    /* Stats grid */
     .stat-cell {
         padding: 1.1rem;
     }
