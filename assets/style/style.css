@@ -152,6 +152,12 @@ body::before {
     opacity: .8;
 }
 
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .nav-items a {
     font-family: var(--mono);
     font-size: .65rem;
@@ -245,32 +251,6 @@ body::before {
     gap: 0.5rem;
 }
 
-@media (max-width: 767px) {
-    .nav-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nav-items {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: color-mix(in srgb, var(--bg) 95%, transparent);
-        border-bottom: 1px solid var(--border);
-        padding: 1.5rem;
-    }
-
-    .nav-items.open {
-        display: flex;
-    }
-}
-
 section {
     position: relative;
     z-index: 1;
@@ -311,7 +291,6 @@ section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 .hero-name-bar {
@@ -453,11 +432,6 @@ section {
     z-index: 10;
 }
 
-@media (max-width: 991px) {
-    .hero-scroll-hint {
-        display: none;
-    }
-}
 
 .btn-filled {
     display: inline-flex;
@@ -1005,8 +979,17 @@ footer {
 }
 
 @media (max-width: 991px) {
+    .hero-name .name-solid {
+        font-size: clamp(5rem, 13vw, 8.5rem);
+    }
+
+    .hero-name .name-stroke {
+        font-size: clamp(4rem, 11.5vw, 7.5rem);
+    }
+
     .hero-middle {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         margin-top: -0.75rem;
         max-height: none;
     }
@@ -1019,31 +1002,73 @@ footer {
         padding-top: 1.5rem;
     }
 
+    .hero-scroll-hint {
+        display: none;
+    }
+
     .btn-group {
         padding-top: 1.5rem;
     }
 
     .hero-cta-col {
+        order: 2;
         border-left: none;
-        border-top: 1px solid var(--border);
-        padding: 2rem 1.5rem;
-        align-items: flex-start;
+        border-top: none;
+        padding: 0 1.5rem 2rem 1.5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-middle>div:last-child {
+        order: 3;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     #logo-3d-wrap {
-        min-height: 42vh;
+        order: 1;
+        margin: 1rem 0 -1.5rem 0;
+        min-height: 35vh;
         max-height: 55vh;
     }
 
-    .hero-scroll-hint {
-        display: none;
+    #logo-3d {
+        width: 90%;
+        height: 90%;
     }
 }
 
+
 @media (max-width: 767px) {
+    .nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: color-mix(in srgb, var(--bg) 95%, transparent);
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem;
+    }
+
+    .nav-items.open {
+        display: flex;
+    }
+
     .section-pad {
         padding: 4.5rem 0;
     }
+    
 
     .hero-name .name-solid {
         font-size: clamp(3rem, 13vw, 7rem);
@@ -1056,6 +1081,17 @@ footer {
     .hero-role-serif {
         padding-top: 1rem;
         font-size: 0.85rem;
+    }
+
+    #logo-3d-wrap {
+        margin: 2rem 0 -2rem 0;
+        min-height: 30vh;
+        max-height: 37vh;
+    }
+
+    #logo-3d {
+        width: 90%;
+        height: 90%;
     }
 
     .btn-group {
@@ -1103,10 +1139,13 @@ footer {
 
     .hero-name-bar {
         padding: 0.8rem 0 0.2em;
+        margin-top: 10rem;
+
     }
 
     .hero-name .name-solid {
         font-size: clamp(2.4rem, 14vw, 4rem);
+        ;
     }
 
     .hero-name .name-stroke {
@@ -1125,8 +1164,14 @@ footer {
     }
 
     #logo-3d-wrap {
-        min-height: 38vh;
-        max-height: 44vh;
+        margin: 2rem 0 -2rem 0;
+        min-height: 27vh;
+        max-height: 34vh;
+    }
+
+    #logo-3d {
+        width: 90%;
+        height: 90%;
     }
 
     .sec-heading {
