@@ -356,7 +356,7 @@
 
         // ── Hint overlay (shows briefly on load) ─────────────────────
         var hint = document.createElement('div');
-        hint.textContent = 'drag to rotate · scroll to zoom';
+        hint.textContent = 'rotate';
         hint.style.cssText = [
         'position:absolute', 'bottom:1.2rem', 'left:50%',
         'transform:translateX(-50%)',
