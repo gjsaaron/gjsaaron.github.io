@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Dev Projects — Prince Aaron Gajes</title>
+  <link rel="icon" type="image/png" href="assets/img/Logo.png" />
+  <meta name="description" content="Web Development Projects — COMP 016">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/style/style.css?v=3">
+  <link rel="stylesheet" href="assets/style/webdev.css?v=1">
+
+</head>
+
+<body>
+
+  <div id="js-cursor"></div>
+  <div id="js-cursor-ring"></div>
+
+  <header class="site-nav py-3">
+    <div class="container d-flex justify-content-between align-items-center gap-3">
+      <a href="index.html" class="nav-logo" aria-label="Go to portfolio">
+        <img src="assets/img/Logo.png" alt="nav-logo" class="nav-logo">
+      </a>
+
+      <nav>
+        <ul class="nav-items list-unstyled mb-0 mt-2" id="navItems">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right d-flex align-items-center gap-2">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark">
+          <i class="bi bi-moon icon-moon"></i>
+          <i class="bi bi-sun icon-sun"></i>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <i class="bi bi-list" style="font-size:1.1rem;"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="webdev-hero section-pad">
+    <div class="container">
+      <a href="index.html#projects" class="back-link reveal">
+        <i class="bi bi-arrow-left"></i> Back to Portfolio
+      </a>
+      <div class="row mt-4">
+        <div class="col-lg-8 reveal">
+          <div class="sec-label">COMP 016 — Web Development</div>
+          <h1 class="webdev-heading">
+            WEB DEV<br><span class="serif-accent">projects.</span>
+          </h1>
+          <p class="webdev-subtext mt-3">
+            A compilation of projects built for the course <strong>COMP 016 – Web Development</strong>.
+            Each project explores different aspects of frontend and backend development.
+          </p>
+        </div>
+        <div class="col-lg-4 d-flex align-items-end reveal reveal-d1">
+          <div class="webdev-meta">
+            <div class="meta-item">
+              <span class="meta-label">Stack</span>
+              <div class="stack-pills d-flex flex-wrap gap-1 mt-1">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">CSS</span>
+                <span class="stack-pill">Bootstrap</span>
+                <span class="stack-pill">JavaScript</span>
+                <span class="stack-pill">PHP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section class="section-pad section-border">
+    <div class="container">
+
+      <div class="row mb-5">
+        <div class="col-lg-6 reveal">
+          <div class="sec-label">Projects</div>
+          <h2 class="sec-heading">ALL<br><span class="serif-accent">submissions.</span></h2>
+        </div>
+        <div class="col-lg-5 offset-lg-1 d-flex align-items-end reveal reveal-d1">
+          <!-- Filter pills -->
+          <div class="filter-group d-flex flex-wrap gap-2 mb-1" id="filterGroup">
+            <button class="filter-pill active" data-filter="all">All</button>
+            <button class="filter-pill" data-filter="html">HTML/CSS</button>
+            <button class="filter-pill" data-filter="bootstrap">Bootstrap</button>
+            <button class="filter-pill" data-filter="js">JavaScript</button>
+            <button class="filter-pill" data-filter="php">PHP</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARDS GRID -->
+      <div class="projects-grid reveal" id="projectsGrid">
+
+        <!-- PLACEHOLDER CARD: Add a new <a> or <div> block here for each project -->
+        <!-- 
+          TEMPLATE (copy and paste, then fill in your details):
+
+          <a href="YOUR_LINK" target="_blank" class="proj-card reveal reveal-d1" data-tags="html bootstrap"
+            style="background-image: url('assets/img/projects/YOUR_IMAGE.png');">
+            <i class="bi bi-arrow-up-right card-arrow"></i>
+            <div class="proj-num">A1</div>
+            <div class="proj-type">Activity 1</div>
+            <h3 class="proj-title">Your Project Title</h3>
+            <p class="proj-desc">A short description of this project.</p>
+            <div class="stack-pills">
+              <span class="stack-pill">HTML</span>
+              <span class="stack-pill">CSS</span>
+            </div>
+            <div class="proj-links">
+              <span class="proj-link"><i class="bi bi-box-arrow-up-right"></i> Live</span>
+            </div>
+          </a>
+        -->
+
+        <!-- A1: Bento Grid -->
+        <a href="https://gjsaaron.github.io/Bento-A1/" target="_blank"
+          class="proj-card reveal reveal-d1" data-tags="html bootstrap"
+          style="background-image: url('assets/img/projects/webdev.png');">
+          <i class="bi bi-arrow-up-right card-arrow"></i>
+          <div class="proj-num">A1</div>
+          <div class="proj-type">Activity 1</div>
+          <h3 class="proj-title">Bento Grid Layout</h3>
+          <p class="proj-desc">A responsive bento-style grid layout built with HTML and Bootstrap.</p>
+          <div class="stack-pills">
+            <span class="stack-pill">HTML</span>
+            <span class="stack-pill">Bootstrap</span>
+          </div>
+          <div class="proj-links">
+            <span class="proj-link"><i class="bi bi-box-arrow-up-right"></i> Live</span>
+          </div>
+        </a>
+
+        <!-- EMPTY SLOT — future project -->
+        <div class="proj-card proj-card--empty reveal reveal-d2">
+          <div class="empty-inner">
+            <i class="bi bi-plus-lg empty-icon"></i>
+            <p class="empty-label">Future Project</p>
+          </div>
+        </div>
+
+        <!-- EMPTY SLOT — future project -->
+        <div class="proj-card proj-card--empty reveal reveal-d1">
+          <div class="empty-inner">
+            <i class="bi bi-plus-lg empty-icon"></i>
+            <p class="empty-label">Future Project</p>
+          </div>
+        </div>
+
+        <!-- EMPTY SLOT — future project -->
+        <div class="proj-card proj-card--empty reveal reveal-d2">
+          <div class="empty-inner">
+            <i class="bi bi-plus-lg empty-icon"></i>
+            <p class="empty-label">Future Project</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <p class="foot-text">&copy; 2025 Prince Aaron Gajes. All rights reserved.</p>
+      <a href="#" class="footer-logo-link" aria-label="Back to top">
+        <img src="assets/img/Logo.png" alt="" class="footer-logo">
+      </a>
+      <p class="foot-text">Designed &amp; built by <span class="acc">PAG</span></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script>
+    /* ── FILTER PILLS ──────────────────────────────────────────── */
+    var filterBtns = document.querySelectorAll('.filter-pill');
+    var cards = document.querySelectorAll('#projectsGrid .proj-card:not(.proj-card--empty)');
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        var filter = btn.getAttribute('data-filter');
+
+        cards.forEach(function (card) {
+          var tags = card.getAttribute('data-tags') || '';
+          if (filter === 'all' || tags.includes(filter)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
