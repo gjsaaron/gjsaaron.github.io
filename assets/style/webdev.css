@@ -29,12 +29,14 @@
     padding-top: 10vh;
     font-family: var(--font-sans);
     font-weight: 800;
-    font-size: clamp(3.5rem, 6vw, 7rem);
+    font-size: clamp(1.5rem, 6vw, 7rem);
     line-height: 0.95;
     letter-spacing: -0.03em;
     color: var(--text);
     text-transform: uppercase;
     text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .webdev-subtext {
@@ -129,7 +131,7 @@
 /* ── RESPONSIVE ─────────────────────────────── */
 @media (max-width: 991px) {
     .webdev-heading {
-        font-size: clamp(3rem, 11vw, 5.5rem);
+        font-size: clamp(2rem, 8vw, 5.5rem);
     }
 
     .webdev-meta {
@@ -143,10 +145,18 @@
     }
 
     .webdev-heading {
-        font-size: clamp(2.75rem, 13vw, 4.5rem);
+        font-size: clamp(1.8rem, 10vw, 4rem);
+        letter-spacing: -0.01em;
     }
 
     .filter-group {
         margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .webdev-heading {
+        font-size: clamp(1.5rem, 9vw, 3rem);
+        letter-spacing: 0;
     }
 }
