@@ -35,8 +35,6 @@
     color: var(--text);
     text-transform: uppercase;
     text-align: center;
-    word-break: break-word;
-    overflow-wrap: break-word;
 }
 
 .webdev-subtext {
