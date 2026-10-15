@@ -4,6 +4,7 @@
     --mono: 'DM Mono', monospace;
     --radius: 4px;
     --transition: 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    --nav-h: 64px;
 }
 
 [data-theme="dark"] {

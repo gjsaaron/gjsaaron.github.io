@@ -26,13 +26,15 @@
 }
 
 .webdev-heading {
+    padding-top: 10vh;
     font-family: var(--font-sans);
     font-weight: 800;
-    font-size: clamp(3.5rem, 9vw, 7rem);
+    font-size: clamp(3.5rem, 6vw, 7rem);
     line-height: 0.95;
     letter-spacing: -0.03em;
     color: var(--text);
     text-transform: uppercase;
+    text-align: center;
 }
 
 .webdev-subtext {
